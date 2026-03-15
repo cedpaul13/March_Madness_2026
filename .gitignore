@@ -1,0 +1,21 @@
+# Environments
+venv/
+.env
+
+# Data
+data/raw/*
+data/processed/*
+data/external/*
+!data/*/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
