@@ -1,6 +1,7 @@
 # Environments
 venv/
 .env
+.vscode/
 
 # Data
 data/raw/*
@@ -19,3 +20,12 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# archives
+archives/
+
+# Kaggle submissions
+submissions/
+
+# model outputs
+models/
