@@ -117,13 +117,15 @@ class GeospatialEngine:
         return df
 
 if __name__ == "__main__":
-    master_sub = pd.read_csv("submission_2026_raw.csv")
+    submissions_path = "submissions"
+    master_sub = pd.read_csv(os.path.join(submissions_path, "submission_2026_raw.csv"))
     for g in ['M', 'W']:
         loader = DataLoader(g)
         seeds = loader.load_seeds()
         engine = GeospatialEngine(g)
         master_sub = engine.process_submission(master_sub, seeds)
     
-    out_file = "submission_2026_geospatial.csv"
+    os.makedirs(submissions_path, exist_ok=True)
+    out_file = os.path.join(submissions_path, "submission_2026_geospatial.csv")
     master_sub.to_csv(out_file, index=False)
     print(f"\nFinal Geospatial submission saved to {out_file}")

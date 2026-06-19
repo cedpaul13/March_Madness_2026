@@ -6,6 +6,7 @@ class KagglePredictor:
     def __init__(self):
         self.raw_path = "data/raw"
         self.proc_path = "data/processed"
+        self.submissions_path = "submissions"
         self.template_path = os.path.join(self.raw_path, "SampleSubmissionStage2.csv")
 
     def generate_kaggle_file(self):
@@ -46,7 +47,8 @@ class KagglePredictor:
         print(f"Populating {len(sub)} matchups...")
         sub['Pred'] = sub.apply(calculate_prob, axis=1)
         
-        out_path = "submission_2026_raw.csv"
+        os.makedirs(self.submissions_path, exist_ok=True)
+        out_path = os.path.join(self.submissions_path, "submission_2026_raw.csv")
         sub[['ID', 'Pred']].to_csv(out_path, index=False)
         print(f"Success! Created {out_path} with {len(sub)} rows.")
 

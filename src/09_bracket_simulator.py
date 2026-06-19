@@ -5,7 +5,7 @@ import os
 class BracketSimulator:
     def __init__(self, gender='M'):
         self.gender = gender
-        self.sub_path = "submission_2026_CFA_FUSION.csv"
+        self.sub_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         self.raw_path = "data/raw"
         
     def get_matchup_prob(self, t1, t2):

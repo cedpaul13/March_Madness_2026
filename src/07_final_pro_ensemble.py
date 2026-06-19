@@ -43,9 +43,10 @@ class FinalEnsemble:
 
         df['Pred'] = df.apply(apply_guardrails, axis=1)
         
-        final_path = "submission_2026_FINAL_PRO_STACKED.csv"
+        os.makedirs("submissions", exist_ok=True)
+        final_path = os.path.join("submissions", "submission_2026_FINAL_PRO_STACKED.csv")
         df.to_csv(final_path, index=False)
         print(f"PIPELINE COMPLETE. Final submission ready: {final_path}")
 
 if __name__ == "__main__":
-    FinalEnsemble().finalize_submission("submission_2026_momentum.csv")
+    FinalEnsemble().finalize_submission(os.path.join("submissions", "submission_2026_momentum.csv"))

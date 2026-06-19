@@ -1,12 +1,13 @@
 import pandas as pd
 import numpy as np
 from scipy.stats import norm
+import os
 
 class ChampionshipBettingBoard:
     def __init__(self, gender='M'):
         self.gender = gender
         self.feat_path = f"data/processed/{self.gender}_full_features_2026.csv"
-        self.sub_path = "submission_2026_CFA_FUSION.csv"
+        self.sub_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         
         # 2026 Championship Matchups from Architect
         self.matchup = {

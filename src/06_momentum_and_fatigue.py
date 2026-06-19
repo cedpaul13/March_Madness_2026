@@ -36,9 +36,10 @@ class MomentumEngine:
             return np.clip(prob, 0.01, 0.99)
 
         df['Pred'] = df.apply(calculate_fatigue, axis=1)
-        out_name = "submission_2026_momentum.csv"
+        os.makedirs("submissions", exist_ok=True)
+        out_name = os.path.join("submissions", "submission_2026_momentum.csv")
         df.to_csv(out_name, index=False)
         print(f"Success: Momentum and Fatigue applied. Saved to {out_name}")
 
 if __name__ == "__main__":
-    MomentumEngine().apply_momentum_rest("submission_2026_geospatial.csv")
+    MomentumEngine().apply_momentum_rest(os.path.join("submissions", "submission_2026_geospatial.csv"))

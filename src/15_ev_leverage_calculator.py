@@ -16,7 +16,7 @@ class EVCalculator:
     def __init__(self, gender='M'):
         self.gender = gender
         self.raw_path = "data/raw"
-        self.sub_path = "submission_2026_CFA_FUSION.csv"
+        self.sub_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         self.loader = DataLoader(self.gender)
         
         # Load and map seeds

@@ -16,7 +16,7 @@ class BracketSimulator:
         self.gender = gender
         self.num_sims = sims
         self.raw_path = "data/raw"
-        self.sub_path = "submission_2026_CFA_FUSION.csv"
+        self.sub_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         
         self.preds = pd.read_csv(self.sub_path).set_index('ID')
         all_slots = pd.read_csv(os.path.join(self.raw_path, f"{self.gender}NCAATourneySlots.csv"))

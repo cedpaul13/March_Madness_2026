@@ -7,7 +7,7 @@ class VegasSimulator:
     def __init__(self, gender='M'):
         self.gender = gender
         self.proc_path = "data/processed"
-        self.sub_path = "submission_2026_CFA_FUSION.csv"
+        self.sub_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         # 2026 Ground Truth Thursday Schedule (EDT)
         self.schedule = {
             1181: "14:50", # Duke

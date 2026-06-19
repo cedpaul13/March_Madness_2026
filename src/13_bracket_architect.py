@@ -16,7 +16,7 @@ class BracketArchitect:
     def __init__(self, gender='M'):
         self.gender = gender
         self.raw_path = "data/raw"
-        self.fused_path = "submission_2026_CFA_FUSION.csv"
+        self.fused_path = os.path.join("submissions", "submission_2026_CFA_FUSION.csv")
         self.loader = DataLoader(self.gender)
         self.preds = pd.read_csv(self.fused_path).set_index('ID')
         
