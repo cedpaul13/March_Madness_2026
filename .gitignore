@@ -32,3 +32,4 @@ models/
 
 # website
 docs/
+*.html
