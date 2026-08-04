@@ -17,11 +17,12 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 cp "$ROOT/docs/index.html" "$TMP/index.html"
+touch "$TMP/.nojekyll"
 cd "$TMP"
 git init -q -b gh-pages
 git config user.name "$NAME"
 git config user.email "$EMAIL"
-git add index.html
+git add index.html .nojekyll
 git commit -q -m "Deploy site $(date +%Y-%m-%d)"
 git push -f "$REMOTE" gh-pages
 
