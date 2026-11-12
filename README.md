@@ -1,6 +1,6 @@
 # March Madness 2026: Predictive Analytics & Bracket Strategy
 
-Every March, millions of people fill out a bracket. I built a model to fill out mine, then spent three weeks watching the tournament argue with it.
+I built CFA Fusion to fill out my 2026 NCAA brackets. This project compares those predictions with the tournament results.
 
 **The full story, results and visuals live [here](https://cedpaul13.github.io/March_Madness_2026/).**
 
@@ -34,12 +34,12 @@ Keep the HTML and CSS under source control alongside the application code.
 The deployment script
 publishes them to `gh-pages` and rejects concurrent updates.
 
-Why it's worth the click:
+Results at a glance:
 
-* An exact Final Four semifinal call, matchup and winner, made before a single game tipped off
+* One men's semifinal predicted correctly, including the matchup and winner
 * All four women's Final Four teams named in advance
 * A 4-1 record on Round 1 leverage plays
-* Two champions the model never saw coming, and an honest account of why
+* Neither eventual champion was my pre-tournament pick
 
 ---
 
