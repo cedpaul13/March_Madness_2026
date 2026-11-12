@@ -4,7 +4,35 @@ Every March, millions of people fill out a bracket. I built a model to fill out 
 
 **The full story, results and visuals live [here](https://cedpaul13.github.io/March_Madness_2026/).**
 
-The site is available in English and French.
+The site is available in English and French, with light and dark themes. Results
+are summarized up front; expert comparisons, game stories, players and highlights
+expand on demand.
+
+The static site lives in [`docs/index.html`](./docs/index.html), with its product
+design layer in [`docs/design.css`](./docs/design.css). Open the HTML directly to
+preview it (no build required). To publish both files to GitHub Pages, run
+`./scripts/deploy_site.sh`.
+
+### Site quality checks
+
+Run the focused browser-fallback and deployment regression tests with Node.js
+and Git (deployment tests use disposable local repositories, never GitHub):
+
+```bash
+node --test scripts/*.test.mjs
+```
+
+Before publishing, check both languages and themes at mobile, tablet and desktop
+widths (including 700/701px and 760/768px breakpoints), 200% text sizing, keyboard
+navigation, expanded tables, forced colors, reduced motion, printing collapsed
+analyses, and navigation/charts with JavaScript disabled. Automated
+accessibility checks do not replace manual contrast and screen-reader testing.
+Video playback requires an HTTP server and third-party availability; direct-file
+previews open YouTube links.
+
+Keep the HTML and CSS under source control alongside the application code.
+The deployment script
+publishes them to `gh-pages` and rejects concurrent updates.
 
 Why it's worth the click:
 

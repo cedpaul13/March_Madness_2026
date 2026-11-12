@@ -30,6 +30,6 @@ submissions/
 # model outputs
 models/
 
-# website
-docs/
+# website previews
 *.html
+!docs/index.html

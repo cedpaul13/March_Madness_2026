@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Deploys docs/index.html to the gh-pages branch so the website ships
-# without its HTML source living on main. Run it after any site edit:
+# Deploys the versioned HTML and stylesheet to the gh-pages branch.
+# Run it after validating any site edit:
 #
 #   ./scripts/deploy_site.sh
 #
@@ -12,18 +12,20 @@ ROOT="$(git rev-parse --show-toplevel)"
 REMOTE="$(git -C "$ROOT" remote get-url origin)"
 NAME="$(git -C "$ROOT" config user.name)"
 EMAIL="$(git -C "$ROOT" config user.email)"
+EXPECTED="$(git ls-remote --heads "$REMOTE" refs/heads/gh-pages | cut -f1)"
 
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 cp "$ROOT/docs/index.html" "$TMP/index.html"
+cp "$ROOT/docs/design.css" "$TMP/design.css"
 touch "$TMP/.nojekyll"
 cd "$TMP"
 git init -q -b gh-pages
 git config user.name "$NAME"
 git config user.email "$EMAIL"
-git add index.html .nojekyll
+git add index.html design.css .nojekyll
 git commit -q -m "Deploy site $(date +%Y-%m-%d)"
-git push -f "$REMOTE" gh-pages
+git push --force-with-lease="refs/heads/gh-pages:$EXPECTED" "$REMOTE" gh-pages
 
 echo "Deployed: https://cedpaul13.github.io/March_Madness_2026/"
