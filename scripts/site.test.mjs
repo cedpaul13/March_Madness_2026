@@ -20,8 +20,31 @@ function boot(getItem = () => null) {
     localStorage: { getItem },
     console: { warn: (...args) => warnings.push(args) },
   });
-  return { app, attributes, warnings };
+  return { app, attributes, document, warnings };
 }
+
+test("the initial page defaults to French and light, including when preferences are invalid", () => {
+  assert.match(html, /<html lang="fr" data-lang="fr" data-theme="light">/);
+  const { attributes } = boot(() => "invalid");
+  assert.equal(attributes.get("data-theme"), "light");
+  assert.equal(attributes.has("data-lang"), false);
+});
+
+test("translated accessible labels default to French without JavaScript", () => {
+  const labels = [...html.matchAll(/aria-label="([^"]*)" data-label-en="[^"]*" data-label-fr="([^"]*)"/g)];
+  assert.ok(labels.length > 0);
+  for (const [, label, french] of labels) assert.equal(label, french);
+});
+
+test("saved language and theme override the defaults", () => {
+  const { attributes, document } = boot((key) => ({
+    "mm26-theme": "dark",
+    "mm26-lang": "en",
+  })[key]);
+  assert.equal(attributes.get("data-theme"), "dark");
+  assert.equal(attributes.get("data-lang"), "en");
+  assert.equal(document.documentElement.lang, "en");
+});
 
 function portrait({ fallback = null, placeholder = null } = {}) {
   const attributes = new Map(fallback ? [["data-fallback", fallback]] : []);
@@ -72,7 +95,7 @@ test("blocked preference storage does not prevent page initialization or image r
   const { app, attributes, warnings } = boot(() => {
     throw new Error("Storage blocked");
   });
-  assert.equal(attributes.get("data-theme"), "dark");
+  assert.equal(attributes.get("data-theme"), "light");
   assert.equal(warnings.length, 2);
   const { image, children } = portrait();
   app.imgFallback(image);

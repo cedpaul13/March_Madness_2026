@@ -4,7 +4,8 @@ I built CFA Fusion to fill out my 2026 NCAA brackets. This project compares thos
 
 **The full story, results and visuals live [here](https://cedpaul13.github.io/March_Madness_2026/).**
 
-The site is available in English and French, with light and dark themes. Results
+The site defaults to French and a light theme; language and theme choices are
+saved for returning visitors. Results
 are summarized up front; expert comparisons, game stories, players and highlights
 expand on demand.
 
