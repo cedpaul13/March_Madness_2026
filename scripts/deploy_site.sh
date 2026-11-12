@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Deploys the versioned HTML and stylesheet to the gh-pages branch.
+# Deploys the versioned HTML, stylesheet and NCAA logo to gh-pages.
 # Run it after validating any site edit:
 #
 #   ./scripts/deploy_site.sh
@@ -19,12 +19,13 @@ trap 'rm -rf "$TMP"' EXIT
 
 cp "$ROOT/docs/index.html" "$TMP/index.html"
 cp "$ROOT/docs/design.css" "$TMP/design.css"
+cp "$ROOT/docs/ncaa-logo.svg" "$TMP/ncaa-logo.svg"
 touch "$TMP/.nojekyll"
 cd "$TMP"
 git init -q -b gh-pages
 git config user.name "$NAME"
 git config user.email "$EMAIL"
-git add index.html design.css .nojekyll
+git add index.html design.css ncaa-logo.svg .nojekyll
 git commit -q -m "Deploy site $(date +%Y-%m-%d)"
 git push --force-with-lease="refs/heads/gh-pages:$EXPECTED" "$REMOTE" gh-pages
 

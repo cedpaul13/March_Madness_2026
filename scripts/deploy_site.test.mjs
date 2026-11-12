@@ -33,6 +33,7 @@ function fixture(t) {
   writeFileSync(join(root, "deploy.sh"), deployScript);
   writeFileSync(join(root, "docs/index.html"), "<!doctype html><title>Fixture</title>");
   writeFileSync(join(root, "docs/design.css"), "body { color: red; }");
+  writeFileSync(join(root, "docs/ncaa-logo.svg"), '<svg aria-label="NCAA"></svg>');
   return {
     root, remote, git, directory,
     deploy: (env = {}) => spawnSync("bash", ["deploy.sh"], {
@@ -41,16 +42,18 @@ function fixture(t) {
   };
 }
 
-test("publishing includes both assets and allows a subsequent deployment", (t) => {
+test("publishing includes the page, stylesheet and logo and allows a subsequent deployment", (t) => {
   const site = fixture(t);
   const first = site.deploy();
   assert.equal(first.status, 0, first.stderr);
   assert.match(site.git("--git-dir", site.remote, "show", "gh-pages:index.html"), /Fixture/);
   assert.match(site.git("--git-dir", site.remote, "show", "gh-pages:design.css"), /red/);
+  assert.match(site.git("--git-dir", site.remote, "show", "gh-pages:ncaa-logo.svg"), /NCAA/);
   writeFileSync(join(site.root, "docs/design.css"), "body { color: blue; }");
   const second = site.deploy();
   assert.equal(second.status, 0, second.stderr);
   assert.match(site.git("--git-dir", site.remote, "show", "gh-pages:design.css"), /blue/);
+  assert.match(site.git("--git-dir", site.remote, "show", "gh-pages:ncaa-logo.svg"), /NCAA/);
 });
 
 test("publishing rejects a concurrent update instead of overwriting it", (t) => {

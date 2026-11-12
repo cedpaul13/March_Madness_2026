@@ -10,8 +10,9 @@ expand on demand.
 
 The static site lives in [`docs/index.html`](./docs/index.html), with its product
 design layer in [`docs/design.css`](./docs/design.css). Open the HTML directly to
-preview it (no build required). To publish both files to GitHub Pages, run
+preview it (no build required). To publish the site and logo to GitHub Pages, run
 `./scripts/deploy_site.sh`.
+The NCAA mark in the header is sourced from [NCAA.com](https://www.ncaa.com/favicon.svg).
 
 ### Site quality checks
 
@@ -38,7 +39,7 @@ Results at a glance:
 
 * One men's semifinal predicted correctly, including the matchup and winner
 * All four women's Final Four teams named in advance
-* A 4-1 record on Round 1 leverage plays
+* A 4-1 record on five first-round picks
 * Neither eventual champion was my pre-tournament pick
 
 ---

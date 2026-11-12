@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Machine and the Madness · March Madness 2026</title>
-<meta name="description" id="metaDesc" content="A 2026 NCAA prediction model nailed one men's semifinal, the women's Final Four and four of five leverage plays—then missed both champions.">
+<title>March Madness 2026: predictions and results · CFA Fusion</title>
+<meta name="description" id="metaDesc" content="A review of CFA Fusion's predictions for the 2026 NCAA men's and women's basketball tournaments, compared with the results.">
 <script>
 (function () {
   window.imgFallback = function (img) {
@@ -242,11 +242,6 @@
   /* ---------- sections ---------- */
   section { padding: 3.6rem 0 0.6rem; }
   @media (max-width: 700px) { section { padding: 2.4rem 0 0.4rem; } }
-  .part {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--s2); margin-bottom: 0.9rem;
-  }
   h2 {
     font-size: clamp(1.7rem, 3.6vw, 2.3rem);
     line-height: 1.15; font-weight: 700; letter-spacing: -0.01em;
@@ -406,9 +401,6 @@
   .star .pic .mono { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink-2); }
   .star .name { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-weight: 700; font-size: 0.98rem; line-height: 1.3; }
   .star .meta { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.76rem; color: var(--muted); margin-top: 0.1rem; }
-  .star .fate { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.78rem; font-weight: 600; margin-bottom: 0.45rem; }
-  .fate.up { color: var(--hit); }
-  .fate.down { color: var(--miss); }
   .star .story { font-size: 0.88rem; line-height: 1.55; color: var(--ink-2); }
   .subhead {
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -540,10 +532,6 @@
 
   /* lessons */
   .lesson { border-top: 1px solid var(--hairline); padding-top: 1.6rem; margin-top: 1.8rem; }
-  .lesson .num {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--s2);
-  }
   .lesson h3 { margin-top: 0.4rem; font-size: 1.3rem; }
 
   /* divider */
@@ -626,12 +614,12 @@
 
 <nav class="topbar" aria-label="Navigation">
   <div class="topbar-in">
-    <a class="wordmark" href="#top"><span class="brand-icon" aria-hidden="true">M<span>/</span>M</span> MM<span class="brand-year"> / 26</span></a>
+    <a class="wordmark" href="#top"><img class="ncaa-logo" src="./ncaa-logo.svg" alt="NCAA" width="40" height="40"> MM<span class="brand-year"> / 26</span></a>
     <span class="spacer"></span>
     <div class="navlinks" id="navLinks">
       <a href="#reckoning"><span class="en">Results</span><span class="fr">Résultats</span></a>
       <a href="#machine"><span class="en">The model</span><span class="fr">Le modèle</span></a>
-      <a href="#experts"><span class="en">Deep dives</span><span class="fr">Analyses</span></a>
+      <a href="#experts"><span class="en">More analysis</span><span class="fr">Analyses</span></a>
       <a class="nav-code" href="https://github.com/cedpaul13/March_Madness_2026">GitHub <span aria-hidden="true">↗</span></a>
     </div>
     <button id="langToggle" aria-label="Changer de langue / Switch language">FR</button>
@@ -644,9 +632,8 @@
   <div class="wide">
     <div class="hero-layout">
     <div class="hero-copy">
-    <p class="kicker"><span class="status-dot" aria-hidden="true"></span><span class="en">Independent research / NCAA 2026</span><span class="fr">Recherche indépendante / NCAA 2026</span></p>
-    <h1><span class="en">My picks for<br><span class="gradient-text">March Madness.</span></span><span class="fr">Mes choix pour<br><span class="gradient-text">March Madness.</span></span></h1>
-    <p class="deck"><span class="en">I used CFA Fusion to fill out my 2026 NCAA brackets. Here’s how it did.</span><span class="fr">J’ai rempli mes tableaux NCAA 2026 avec CFA Fusion. Voici le bilan.</span></p>
+    <h1><span class="en">I picked Duke.<br><span class="gradient-text">Michigan won.</span></span><span class="fr">J’avais choisi Duke.<br><span class="gradient-text">Michigan a gagné.</span></span></h1>
+    <p class="deck"><span class="en">A look back at my men’s and women’s brackets, and the model behind them.</span><span class="fr">Retour sur mes tableaux masculin et féminin, et sur le modèle qui les a remplis.</span></p>
     <div class="hero-actions">
       <a class="button button-primary" href="#reckoning"><span class="en">Explore the results</span><span class="fr">Explorer les résultats</span><span aria-hidden="true">↗</span></a>
       <a class="button button-secondary" href="#machine"><span class="en">Inside the model</span><span class="fr">Comprendre le modèle</span><span aria-hidden="true">↓</span></a>
@@ -675,26 +662,16 @@
     </div>
     </div>
     <aside class="signal-card" aria-labelledby="signalTitle">
-      <div class="signal-top"><span class="signal-brand">CFA FUSION</span><span class="season-tag"><span class="en">2026 REVIEW</span><span class="fr">BILAN 2026</span></span></div>
-      <h2 id="signalTitle"><span class="en">My Final Four picks</span><span class="fr">Mes choix pour le Final Four</span></h2>
-      <div class="signal-orbit">
-        <div class="orbit-core"><strong>4<span>/4</span></strong><span class="en">Final Four teams</span><span class="fr">équipes du Final Four</span></div>
-        <span class="orbit-label"><span class="en">WOMEN’S BRACKET</span><span class="fr">TABLEAU FÉMININ</span></span>
-      </div>
-      <div class="signal-teams">
-        <span><i aria-hidden="true">✓</i> UConn</span><span><i aria-hidden="true">✓</i> South Carolina</span>
-        <span><i aria-hidden="true">✓</i> Texas</span><span><i aria-hidden="true">✓</i> UCLA</span>
-      </div>
-      <div class="signal-bottom"><span><span class="en">Champions picked correctly</span><span class="fr">Champions bien prédits</span></span><strong>0 / 2</strong></div>
-      <p class="signal-note"><span class="en">All picks locked before the tournament.</span><span class="fr">Choix fixés avant le début du tournoi.</span></p>
+      <p class="signal-label"><span class="en">Women’s bracket · 2026</span><span class="fr">Tableau féminin · 2026</span></p>
+      <h2 id="signalTitle"><strong>4/4</strong> <span class="en">Final Four teams picked</span><span class="fr">équipes du Final Four prévues</span></h2>
+      <p class="signal-teams">UConn <span aria-hidden="true">·</span> South Carolina <span aria-hidden="true">·</span> Texas <span aria-hidden="true">·</span> UCLA</p>
     </aside>
     </div>
 
     <div class="stats sans">
-      <div class="stat"><div class="v"><span class="en">132,134</span><span class="fr">132&nbsp;134</span></div><div class="l"><span class="en">matchup probabilities submitted</span><span class="fr">probabilités de matchs soumises</span></div></div>
-      <div class="stat"><div class="v"><span class="en">20,000</span><span class="fr">20&nbsp;000</span></div><div class="l"><span class="en">simulated tournaments, 10,000 per bracket</span><span class="fr">tournois simulés; 10&nbsp;000 par tableau</span></div></div>
-      <div class="stat"><div class="v">136</div><div class="l"><span class="en">teams across both tournaments</span><span class="fr">équipes dans les deux tournois</span></div></div>
-      <div class="stat"><div class="v">4-1</div><div class="l"><span class="en">record on Round 1 leverage plays</span><span class="fr">fiche sur les paris à contre-courant du 1er tour</span></div></div>
+      <div class="stat"><div class="v"><span class="en">132,134</span><span class="fr">132&nbsp;134</span></div><div class="l"><span class="en">match probabilities</span><span class="fr">probabilités de match</span></div></div>
+      <div class="stat"><div class="v"><span class="en">20,000</span><span class="fr">20&nbsp;000</span></div><div class="l"><span class="en">tournament simulations · 10,000 per bracket</span><span class="fr">simulations · 10&nbsp;000 par tableau</span></div></div>
+      <div class="stat"><div class="v">4–1</div><div class="l"><span class="en">first-round picks</span><span class="fr">pronostics du premier tour</span></div></div>
     </div>
   </div>
 </header>
@@ -703,17 +680,16 @@
 <div class="bracketintro">
   <div class="wide">
     <div class="section-heading">
-      <p class="part"><span class="en">01 / Predictions vs. results</span><span class="fr">01 / Prédictions et résultats</span></p>
-      <h2><span class="en">Who I picked to win</span><span class="fr">Mes choix de champions</span></h2>
+      <h2><span class="en">Title picks</span><span class="fr">Mes choix de champions</span></h2>
     </div>
     <div class="outcome-grid">
       <article class="outcome-card">
-        <div class="outcome-top"><h3><span class="en">Men’s championship</span><span class="fr">Titre masculin</span></h3><span class="outcome-tag"><span class="en">Missed</span><span class="fr">Manqué</span></span></div>
+        <div class="outcome-top"><h3><span class="en">Men’s championship</span><span class="fr">Titre masculin</span></h3></div>
         <div class="outcome-match"><div><span class="data-label"><span class="en">Model pick</span><span class="fr">Choix du modèle</span></span><strong>Duke</strong><small><span class="en">18.7% title probability</span><span class="fr">18,7 % de chances de titre</span></small></div><span class="match-arrow" aria-hidden="true">→</span><div><span class="data-label"><span class="en">Actual champion</span><span class="fr">Champion réel</span></span><strong>Michigan</strong><small><span class="en">69–63 vs. UConn</span><span class="fr">69–63 contre UConn</span></small></div></div>
         <a class="outcome-link" href="#reckoning"><span class="en">See the men’s results</span><span class="fr">Voir le bilan masculin</span><span aria-hidden="true">↗</span></a>
       </article>
       <article class="outcome-card">
-        <div class="outcome-top"><h3><span class="en">Women’s championship</span><span class="fr">Titre féminin</span></h3><span class="outcome-tag"><span class="en">Missed</span><span class="fr">Manqué</span></span></div>
+        <div class="outcome-top"><h3><span class="en">Women’s championship</span><span class="fr">Titre féminin</span></h3></div>
         <div class="outcome-match"><div><span class="data-label"><span class="en">Model pick</span><span class="fr">Choix du modèle</span></span><strong>UConn</strong><small><span class="en">18.0% title probability</span><span class="fr">18,0 % de chances de titre</span></small></div><span class="match-arrow" aria-hidden="true">→</span><div><span class="data-label"><span class="en">Actual champion</span><span class="fr">Championne réelle</span></span><strong>UCLA</strong><small><span class="en">79–51 vs. South Carolina</span><span class="fr">79–51 contre South Carolina</span></small></div></div>
         <a class="outcome-link" href="#reckoning"><span class="en">See the women’s results</span><span class="fr">Voir le bilan féminin</span><span aria-hidden="true">↗</span></a>
       </article>
@@ -723,7 +699,6 @@
 
 <section id="machine">
   <div class="prose">
-    <p class="part"><span class="en">02 / Method</span><span class="fr">02 / Méthode</span></p>
     <h2><span class="en">How the model works</span><span class="fr">Comment fonctionne le modèle</span></h2>
     <p class="en">XGBoost adjusts points per possession for opponent strength. The other two signals account for travel distance, recent results and rest.</p>
     <p class="fr">XGBoost ajuste les points par possession selon le niveau des adversaires. Les deux autres signaux tiennent compte des déplacements, des résultats récents et du repos.</p>
@@ -752,10 +727,9 @@
 
 <section id="picks">
   <div class="prose">
-    <p class="part"><span class="en">03 / Before tip-off</span><span class="fr">03 / Avant le coup d’envoi</span></p>
-    <h2><span class="en">Who the model favored</span><span class="fr">Les favoris du modèle</span></h2>
-    <p class="en">Duke was my top pick, but the model gave it less than a one-in-five chance of winning.</p>
-    <p class="fr">Duke était mon premier choix, mais ses chances de titre restaient inférieures à une sur cinq.</p>
+    <h2><span class="en">Title probabilities</span><span class="fr">Probabilités de titre</span></h2>
+    <p class="en">Even the top pick, Duke, had less than a one-in-five chance of winning the title.</p>
+    <p class="fr">Même le favori, Duke, avait moins d’une chance sur cinq de remporter le titre.</p>
   </div>
   <div class="prose">
     <figure>
@@ -765,7 +739,7 @@
       <div class="hbar-row"><div class="hbar-label">Michigan</div><div class="hbar-track viz"><div class="hbar-fill" style="--w:17.6%" title="Michigan: 17.6%"></div></div><div class="hbar-val"><span class="en">17.6%</span><span class="fr">17,6&nbsp;%</span></div></div>
       <div class="hbar-group"><span class="en">Women's bracket</span><span class="fr">Tableau féminin</span></div>
       <div class="hbar-row"><div class="hbar-label"><span class="en">UConn · the pick</span><span class="fr">UConn · le choix</span></div><div class="hbar-track viz"><div class="hbar-fill" style="--w:18.0%" title="UConn: 18.0%"></div></div><div class="hbar-val"><span class="en">18.0%</span><span class="fr">18,0&nbsp;%</span></div></div>
-      <figcaption><span class="en">Duke led Michigan by just 1.1 percentage points. The bars run from 0 to 100%.</span><span class="fr">Duke devançait Michigan de seulement 1,1 point de pourcentage. Les barres vont de 0 à 100&nbsp;%.</span></figcaption>
+      <figcaption><span class="en">The leading men’s teams were separated by 1.1 percentage points. Bars show title probability on a 0–100% scale.</span><span class="fr">Les deux favoris masculins n’étaient séparés que de 1,1 point. Les barres montrent les probabilités de titre sur une échelle de 0 à 100&nbsp;%.</span></figcaption>
     </figure>
   </div>
   <div class="prose">
@@ -776,7 +750,7 @@
 
 <section id="experts" class="chapter">
   <details>
-    <summary><span class="chapter-index">A</span><span class="chapter-label"><span class="en">Against the experts</span><span class="fr">Face aux experts</span><small><span class="en">CBS, ESPN, KenPom &amp; Alan Boston</span><span class="fr">CBS, ESPN, KenPom et Alan Boston</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
+    <summary><span class="chapter-label"><span class="en">Expert picks</span><span class="fr">Les pronostics des experts</span><small><span class="en">CBS, ESPN, KenPom &amp; Alan Boston</span><span class="fr">CBS, ESPN, KenPom et Alan Boston</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
   <div class="prose">
     <div class="star solo">
       <div class="head">
@@ -870,11 +844,11 @@
 
 <section id="fightsback" class="chapter">
   <details>
-    <summary><span class="chapter-index">B</span><span class="chapter-label"><span class="en">Key games</span><span class="fr">Les matchs à retenir</span><small><span class="en">High Point, Duke, UConn and the finals</span><span class="fr">High Point, Duke, UConn et les finales</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
+    <summary><span class="chapter-label"><span class="en">Key games</span><span class="fr">Les matchs à retenir</span><small><span class="en">High Point, Duke, UConn and both finals</span><span class="fr">High Point, Duke, UConn et les deux finales</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
   <div class="prose">
     <p class="en">Chase Johnston went 406 minutes without a two-point basket, then hit one with 11 seconds left to beat Wisconsin 83–82. Arkansas needed 36 points from Darius Acuff Jr. to stop High Point’s run.</p>
     <p class="fr">Après 406 minutes sans panier à deux points, Chase Johnston en a inscrit un à 11 secondes de la fin pour battre Wisconsin 83–82. Arkansas a eu besoin des 36 points de Darius Acuff fils pour arrêter High Point.</p>
-    <a class="embed mini" href="https://www.youtube.com/watch?v=VwkII_BHkxE" data-yt="VwkII_BHkxE" target="_blank" rel="noopener" aria-label="Improbable ending to High Point-Wisconsin thriller" data-label-en="Improbable ending to High Point-Wisconsin thriller" data-label-fr="Le dénouement de High Point–Wisconsin"><img src="https://i.ytimg.com/vi/VwkII_BHkxE/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play"></span></a><p class="clipcap"><span class="en">The improbable ending</span><span class="fr">Le dénouement improbable</span></p>
+    <a class="embed mini" href="https://www.youtube.com/watch?v=VwkII_BHkxE" data-yt="VwkII_BHkxE" target="_blank" rel="noopener" aria-label="Improbable ending to High Point-Wisconsin thriller" data-label-en="Improbable ending to High Point-Wisconsin thriller" data-label-fr="Le dénouement de High Point–Wisconsin"><img src="https://i.ytimg.com/vi/VwkII_BHkxE/hqdefault.jpg" alt="" loading="lazy" decoding="async" width="480" height="360"><span class="play"></span></a>    <p class="clipcap"><span class="en">Johnston’s game-winner</span><span class="fr">Le panier décisif de Johnston</span></p>
   </div>
   <div class="wide">
     <div class="cards">
@@ -919,8 +893,7 @@
 
 <section id="reckoning">
   <div class="prose">
-    <p class="part"><span class="en">04 / The scorecard</span><span class="fr">04 / Le bilan</span></p>
-    <h2><span class="en">How the picks turned out</span><span class="fr">Ce qu’ont donné mes choix</span></h2>
+    <h2><span class="en">What happened to my picks</span><span class="fr">Résultats de mes pronostics</span></h2>
     <div class="verdict-grid">
     <div class="verdict-column">
     <h3 class="sans"><span class="en">Men's bracket</span><span class="fr">Tableau masculin</span></h3>
@@ -936,7 +909,7 @@
     <ul class="verdicts">
       <li><span class="glyph ok">✓</span><span><span class="en">South Carolina reached the final as predicted</span><span class="fr">South Carolina en finale, comme prévu</span></span></li>
       <li><span class="glyph no">✗</span><span><span class="en">UConn as champion; eliminated in the semifinal</span><span class="fr">UConn championne; éliminée en demi-finale</span></span></li>
-      <li><span class="glyph no">✗</span><span><span class="en">UCLA dismissed in its semifinal; won the title by 28</span><span class="fr">UCLA écartée dès sa demi-finale; titrée par 28 points d&rsquo;écart</span></span></li>
+      <li><span class="glyph no">✗</span><span><span class="en">I picked UCLA to lose in the semifinal; it won the title by 28</span><span class="fr">J’avais prévu l’élimination de UCLA en demi-finale; elle a remporté le titre par 28 points</span></span></li>
     </ul>
     </div>
     </div>
@@ -951,16 +924,16 @@
     </figure>
   </div>
   <div class="wide">
-    <h3 class="subhead"><span class="en">Round 1 leverage plays · 4–1</span><span class="fr">Paris à contre-courant du 1er tour · 4–1</span></h3>
+    <h3 class="subhead"><span class="en">First-round picks · 4–1</span><span class="fr">Pronostics du premier tour · 4–1</span></h3>
     <div class="tablewrap">
       <table>
-        <thead><tr><th scope="col"><span class="en">Call</span><span class="fr">Bilan</span></th><th scope="col"><span class="en">Game</span><span class="fr">Match</span></th><th scope="col"><span class="en">The case</span><span class="fr">Le pari</span></th><th scope="col"><span class="en">Final</span><span class="fr">Score final</span></th></tr></thead>
+        <thead><tr><th scope="col"><span class="en">Call</span><span class="fr">Bilan</span></th><th scope="col"><span class="en">Game</span><span class="fr">Match</span></th><th scope="col"><span class="en">Why</span><span class="fr">Pourquoi</span></th><th scope="col"><span class="en">Final</span><span class="fr">Score final</span></th></tr></thead>
         <tbody>
-          <tr><td><span class="glyph ok sans">✓</span></td><td>Texas (11) vs. BYU (6)</td><td data-en="The case" data-fr="Le pari"><span class="en">Bet against BYU: Richie Saunders (18 PPG) injured</span><span class="fr">Miser contre BYU&nbsp;: Richie Saunders (18 pts/match) blessé</span></td><td class="n" data-en="Final" data-fr="Score final">Texas 79, BYU 71</td></tr>
-          <tr><td><span class="glyph ok sans">✓</span></td><td>TCU (9) vs. Ohio State (8)</td><td data-en="The case" data-fr="Le pari"><span class="en">TCU as bracket-buster</span><span class="fr">TCU en trouble-fête</span></td><td class="n" data-en="Final" data-fr="Score final">TCU 66, Ohio St 64</td></tr>
-          <tr><td><span class="glyph ok sans">✓</span></td><td>Saint Louis (9) vs. Georgia (8)</td><td data-en="The case" data-fr="Le pari"><span class="en">Volatility flag on the 8/9 slot</span><span class="fr">Alerte volatilité sur le duel 8/9</span></td><td class="n" data-en="Final" data-fr="Score final">Saint Louis 102, Georgia 77</td></tr>
-          <tr><td><span class="glyph ok sans">✓</span></td><td>VCU (11) vs. North Carolina (6)</td><td data-en="The case" data-fr="Le pari"><span class="en">Bet against UNC: rim protection on a freshman</span><span class="fr">Miser contre UNC&nbsp;: protection du cercle confiée à un joueur de première année</span></td><td class="n" data-en="Final" data-fr="Score final">VCU 82, UNC 78 (OT)</td></tr>
-          <tr><td><span class="glyph no sans">✗</span></td><td>South Florida (11) vs. Louisville (6)</td><td data-en="The case" data-fr="Le pari"><span class="en">USF upset candidate</span><span class="fr">South Florida candidat à la surprise</span></td><td class="n" data-en="Final" data-fr="Score final">Louisville 83, USF 79</td></tr>
+          <tr><td><span class="glyph ok sans">✓</span></td><td>Texas (11) vs. BYU (6)</td><td data-en="Why" data-fr="Pourquoi"><span class="en">BYU was without 18-point scorer Richie Saunders</span><span class="fr">BYU jouait sans Richie Saunders, auteur de 18 points par match</span></td><td class="n" data-en="Final" data-fr="Score final">Texas 79, BYU 71</td></tr>
+          <tr><td><span class="glyph ok sans">✓</span></td><td>TCU (9) vs. Ohio State (8)</td><td data-en="Why" data-fr="Pourquoi"><span class="en">TCU could shake up the bracket</span><span class="fr">TCU pouvait bousculer le tableau</span></td><td class="n" data-en="Final" data-fr="Score final">TCU 66, Ohio St 64</td></tr>
+          <tr><td><span class="glyph ok sans">✓</span></td><td>Saint Louis (9) vs. Georgia (8)</td><td data-en="Why" data-fr="Pourquoi"><span class="en">The model flagged the 8/9 matchup as volatile</span><span class="fr">Le modèle signalait l’incertitude du duel entre les têtes de série 8 et 9</span></td><td class="n" data-en="Final" data-fr="Score final">Saint Louis 102, Georgia 77</td></tr>
+          <tr><td><span class="glyph ok sans">✓</span></td><td>VCU (11) vs. North Carolina (6)</td><td data-en="Why" data-fr="Pourquoi"><span class="en">UNC relied on a freshman to protect the rim</span><span class="fr">UNC s’en remettait à un joueur de première année pour protéger le cercle</span></td><td class="n" data-en="Final" data-fr="Score final">VCU 82, UNC 78 (OT)</td></tr>
+          <tr><td><span class="glyph no sans">✗</span></td><td>South Florida (11) vs. Louisville (6)</td><td data-en="Why" data-fr="Pourquoi"><span class="en">South Florida could surprise Louisville</span><span class="fr">South Florida pouvait surprendre Louisville</span></td><td class="n" data-en="Final" data-fr="Score final">Louisville 83, USF 79</td></tr>
         </tbody>
       </table>
     </div>
@@ -969,9 +942,9 @@
 
 <section id="stars" class="chapter">
   <details>
-    <summary><span class="chapter-index">C</span><span class="chapter-label"><span class="en">Players after the tournament</span><span class="fr">Les joueurs après le tournoi</span><small><span class="en">NBA and WNBA draft picks, college returns</span><span class="fr">Repêchages NBA et WNBA, retours à l’université</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
+    <summary><span class="chapter-label"><span class="en">Players after the tournament</span><span class="fr">Les joueurs après le tournoi</span><small><span class="en">NBA and WNBA draft picks, college returns</span><span class="fr">Repêchages NBA et WNBA, retours à l’université</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
   <div class="prose">
-    <p class="subhead"><span class="en">The risers</span><span class="fr">La cote en hausse</span></p>
+    <p class="subhead"><span class="en">Draft picks and returns</span><span class="fr">Repêchages et retours</span></p>
   </div>
   <div class="wide">
     <div class="starsgrid">
@@ -980,7 +953,6 @@
           <div class="pic"><span class="mono" hidden>EC</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fmgoblue.com%2Fimages%2F2025%2F7%2F28%2F3-Elliot-Cadeau_RlvVx.jpg&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/mens-college-basketball/players/full/4869764.png" alt="Elliot Cadeau" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Elliot Cadeau</div><div class="meta"><span class="en">Michigan · G</span><span class="fr">Michigan · meneur</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ MOP · back for 2026-27</span><span class="fr">▲ Joueur par excellence · de retour</span></div>
         <div class="story"><span class="en">A year after leaving North Carolina, he withdrew from draft testing to return to Michigan.</span><span class="fr">Un an après son départ de North Carolina, il a retiré sa candidature au repêchage pour revenir à Michigan.</span></div>
       </div>
       <div class="star">
@@ -988,7 +960,6 @@
           <div class="pic"><span class="mono" hidden>BM</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuconnhuskies.com%2Fimages%2F2026%2F7%2F7%2F24_MULLINS_BRAYLON.png&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/mens-college-basketball/players/full/5196916.png" alt="Braylon Mullins" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Braylon Mullins</div><div class="meta"><span class="en">UConn · G</span><span class="fr">UConn · arrière</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ The 0.3-second shot</span><span class="fr">▲ Le tir à 0,3 seconde</span></div>
         <div class="story"><span class="en">Ranked seventh in The Athletic’s 2027 class, he chose another year at UConn.</span><span class="fr">Septième de la cuvée 2027 selon The Athletic, il a choisi une autre année à UConn.</span></div>
       </div>
       <div class="star">
@@ -996,7 +967,6 @@
           <div class="pic"><span class="mono" hidden>AM</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fmgoblue.com%2Fimages%2F2025%2F7%2F28%2F15-Aday-Mara_1yHES.jpg&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/nba/players/full/5174983.png" alt="Aday Mara" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Aday Mara</div><div class="meta"><span class="en">Michigan → Thunder, No. 12</span><span class="fr">Michigan → Thunder, 12e</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ Lottery pick</span><span class="fr">▲ Choix de loterie</span></div>
         <div class="story"><span class="en">The 7-foot-3 defender became a lottery pick after his breakout semifinal.</span><span class="fr">Le défenseur de 7 pieds 3 a été choisi en loterie après sa percée en demi-finale.</span></div>
       </div>
       <div class="star">
@@ -1004,7 +974,6 @@
           <div class="pic"><span class="mono" hidden>MJ</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fmgoblue.com%2Fimages%2F2025%2F7%2F28%2F21-Morez-Johnson-Jr_vD0Hr.jpg&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/nba/players/full/4873153.png" alt="Morez Johnson Jr." loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Morez Johnson Jr.</div><div class="meta"><span class="en">Michigan → Mavericks, No. 9</span><span class="fr">Michigan → Mavericks, 9e</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ Reunited with his coach</span><span class="fr">▲ Réuni avec son coach</span></div>
         <div class="story"><span class="en">13.1 points, 7.3 rebounds, 62% shooting. His Dallas selection reunited him with Dusty May.</span><span class="fr">13,1 points, 7,3 rebonds, 62 % au tir. Sa sélection par Dallas l’a réuni avec Dusty May.</span></div>
       </div>
       <div class="star">
@@ -1012,7 +981,6 @@
           <div class="pic"><span class="mono" hidden>LB</span><img src="data:image/jpeg;base64,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" alt="Lauren Betts" width="160" height="160" decoding="async"></div>
           <div><div class="name">Lauren Betts</div><div class="meta"><span class="en">UCLA → Mystics, No. 4</span><span class="fr">UCLA → Mystics, 4e</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ Tournament MOP</span><span class="fr">▲ Joueuse par excellence</span></div>
         <div class="story"><span class="en">A double-double in the final: 14 points and 11 rebounds.</span><span class="fr">Un double-double en finale : 14 points et 11 rebonds.</span></div>
       </div>
       <div class="star">
@@ -1020,7 +988,6 @@
           <div class="pic"><span class="mono" hidden>GJ</span><img src="data:image/jpeg;base64,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" alt="Gabriela Jaquez" width="160" height="160" decoding="async"></div>
           <div><div class="name">Gabriela Jaquez</div><div class="meta"><span class="en">UCLA → Sky, No. 5</span><span class="fr">UCLA → Sky, 5e</span></div></div>
         </div>
-        <div class="fate up"><span class="en">▲ NCAA champion</span><span class="fr">▲ Championne NCAA</span></div>
         <div class="story"><span class="en">21 points in her college finale. One of a record five UCLA first-round picks.</span><span class="fr">21 points pour son dernier match universitaire. Parmi les cinq choix de premier tour de UCLA, un record.</span></div>
       </div>
     </div>
@@ -1028,7 +995,7 @@
   <div class="prose">
     <p class="en">With Yaxel Lendeborg at No. 11, Michigan claimed three of the four picks from 9 to 12.</p>
     <p class="fr">Avec Yaxel Lendeborg au 11e rang, Michigan a obtenu trois des quatre choix entre les rangs 9 et 12.</p>
-    <p class="subhead"><span class="en">Early exits, top picks</span><span class="fr">Sorties hâtives, premiers choix</span></p>
+    <p class="subhead"><span class="en">Early exits, high picks</span><span class="fr">Éliminés tôt, repêchés haut</span></p>
   </div>
   <div class="wide">
     <div class="starsgrid">
@@ -1037,7 +1004,6 @@
           <div class="pic"><span class="mono" hidden>AD</span><img src="data:image/jpeg;base64,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" alt="AJ Dybantsa" width="160" height="160" decoding="async"></div>
           <div><div class="name">AJ Dybantsa</div><div class="meta"><span class="en">BYU → Wizards, No. 1</span><span class="fr">BYU → Wizards, 1er</span></div></div>
         </div>
-        <div class="fate down"><span class="en">▼ one March game · No. 1 overall</span><span class="fr">▼ un seul match en mars · 1er au total</span></div>
         <div class="story"><span class="en">BYU’s first-round loss to Texas did not cost him the No. 1 pick.</span><span class="fr">L’élimination de BYU face à Texas au premier tour ne lui a pas coûté le premier choix.</span></div>
       </div>
       <div class="star">
@@ -1045,7 +1011,6 @@
           <div class="pic"><span class="mono" hidden>CB</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fgoduke.com%2Fimages%2F2025%2F9%2F15%2FHeadshots_4x6_Boozer__Cameron_bCXS6.jpg&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/nba/players/full/5041935.png" alt="Cameron Boozer" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Cameron Boozer</div><div class="meta"><span class="en">Duke → Grizzlies, No. 3</span><span class="fr">Duke → Grizzlies, 3e</span></div></div>
         </div>
-        <div class="fate down"><span class="en">▼ the 19-point collapse · No. 3</span><span class="fr">▼ l&rsquo;avance de 19 dilapidée · 3e</span></div>
         <div class="story"><span class="en">Memphis took him third despite Duke’s Elite Eight collapse.</span><span class="fr">Memphis l’a choisi troisième malgré l’effondrement de Duke en Elite Eight.</span></div>
       </div>
       <div class="star">
@@ -1053,7 +1018,6 @@
           <div class="pic"><span class="mono" hidden>CW</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Func.sidearmsports.com%2Fimages%2F2025%2F9%2F25%2FWilson_Caleb.mb.headshot.01_Nh8xq.JPG&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/nba/players/full/5095151.png" alt="Caleb Wilson" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Caleb Wilson</div><div class="meta"><span class="en">North Carolina → Bulls, No. 4</span><span class="fr">North Carolina → Bulls, 4e</span></div></div>
         </div>
-        <div class="fate down"><span class="en">▼ the model's bet · No. 4</span><span class="fr">▼ le pari du modèle · 4e</span></div>
         <div class="story"><span class="en">After UNC’s early exit, he opened summer league with 35 points.</span><span class="fr">Après l’élimination hâtive de UNC, il a ouvert la ligue d’été avec 35 points.</span></div>
       </div>
       <div class="star">
@@ -1061,7 +1025,6 @@
           <div class="pic"><span class="mono" hidden>AF</span><img src="https://images.sidearmdev.com/resize?url=https%3A%2F%2Fdxbhsrqyrr690.cloudfront.net%2Fsidearm.nextgen.sites%2Fuconnhuskies.com%2Fimages%2F2025%2F9%2F15%2FFudd_Azzi.jpg&amp;width=400&amp;type=jpeg" data-fallback="https://a.espncdn.com/i/headshots/wnba/players/full/4433790.png" alt="Azzi Fudd" loading="lazy" onerror="imgFallback(this)" decoding="async" width="160" height="160"></div>
           <div><div class="name">Azzi Fudd</div><div class="meta"><span class="en">UConn → Wings, No. 1 WNBA</span><span class="fr">UConn → Wings, 1re WNBA</span></div></div>
         </div>
-        <div class="fate down"><span class="en">▼ 3-of-15 in the semi · No. 1</span><span class="fr">▼ 3 en 15 en demi-finale · 1re</span></div>
         <div class="story"><span class="en">From 3-of-15 in UConn’s semifinal loss to a Rookie of the Year contender in Dallas.</span><span class="fr">De 3 tirs réussis sur 15 en demi-finale à candidate au titre de recrue de l’année à Dallas.</span></div>
       </div>
     </div>
@@ -1071,7 +1034,7 @@
 
 <section id="social" class="chapter">
   <details>
-    <summary><span class="chapter-index">D</span><span class="chapter-label"><span class="en">Sources &amp; reactions</span><span class="fr">Sources et réactions</span><small><span class="en">Pre-tournament context &amp; player perspective</span><span class="fr">Contexte avant tournoi et regard des joueurs</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
+    <summary><span class="chapter-label"><span class="en">Before and after the tournament</span><span class="fr">Avant et après le tournoi</span><small><span class="en">What experts and players said</span><span class="fr">Ce qu’en disaient les experts et les joueurs</span></small></span><span class="chapter-plus" aria-hidden="true">+</span></summary>
   <div class="prose">
     <p class="subhead"><span class="en">Before the tournament</span><span class="fr">Avant le tournoi</span></p>
   </div>
@@ -1108,25 +1071,21 @@
 
 <section id="lessons">
   <div class="prose">
-    <p class="part"><span class="en">05 / Next iteration</span><span class="fr">05 / Prochaine version</span></p>
     <h2><span class="en">What I’ll test for 2027</span><span class="fr">Ce que je vais tester pour 2027</span></h2>
 
     <div class="lesson">
-      <p class="num"><span class="en">01</span><span class="fr">01</span></p>
       <h3><span class="en">Championship-game margins</span><span class="fr">Les écarts en finale</span></h3>
       <p class="en">I’ll compare past finals with earlier rounds before changing the model’s uncertainty estimates. One lopsided game isn’t enough.</p>
       <p class="fr">Je comparerai les finales passées aux autres tours avant de modifier l’incertitude du modèle. Un seul match à sens unique ne suffit pas.</p>
     </div>
 
     <div class="lesson">
-      <p class="num"><span class="en">02</span><span class="fr">02</span></p>
       <h3><span class="en">Coaching experience</span><span class="fr">L’expérience des entraîneurs</span></h3>
       <p class="en">I’ll test whether tournament coaching experience improves predictions, with any adjustment capped and set before Selection Sunday.</p>
       <p class="fr">Je testerai si l’expérience des entraîneurs en tournoi améliore les prédictions, avec un ajustement plafonné et fixé avant Selection Sunday.</p>
     </div>
 
     <div class="lesson">
-      <p class="num"><span class="en">03</span><span class="fr">03</span></p>
       <h3><span class="en">Notes from watching games</span><span class="fr">Les observations de match</span></h3>
       <p class="en">I’ll record observations in January and February, before the draw. Illinois’s offense and Duke’s close wins are two examples worth tracking.</p>
       <p class="fr">Je noterai mes observations en janvier et février, avant le tirage. L’attaque d’Illinois et les victoires serrées de Duke sont deux exemples à suivre.</p>
@@ -1188,12 +1147,12 @@
   var langBtn = document.getElementById("langToggle");
   var meta = document.getElementById("metaDesc");
   var titles = {
-    en: "The Machine and the Madness · March Madness 2026",
-    fr: "La machine et la folie · March Madness 2026"
+    en: "March Madness 2026: predictions and results · CFA Fusion",
+    fr: "March Madness 2026 : pronostics et résultats · CFA Fusion"
   };
   var descs = {
-    en: "A 2026 NCAA prediction model nailed one men's semifinal, the women's Final Four and four of five leverage plays—then missed both champions.",
-    fr: "Un modèle de prédiction NCAA 2026 a trouvé une demi-finale masculine, le Final Four féminin et quatre paris sur cinq — puis raté les deux champions."
+    en: "A review of CFA Fusion's predictions for the 2026 NCAA men's and women's basketball tournaments, compared with the results.",
+    fr: "Bilan des prédictions de CFA Fusion pour les tournois NCAA masculin et féminin de 2026, comparées aux résultats."
   };
   function setLang(lang) {
     root.setAttribute("data-lang", lang);
